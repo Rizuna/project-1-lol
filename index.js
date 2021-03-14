@@ -266,24 +266,24 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `Hola @${num.split('@')[0]}
-Bienvenido a
+				teks = `Hai @${num.split('@')[0]}
+Selamat datang di
 *${mdata.subject}*
 ────────────────
 ┏━━━━━━━━━━━━━━━━━━━━
-┃──────〘  *Puedes presentarte* 〙───────
+┃──────〘  *Intro* 〙───────
 ┃━━━━━━━━━━━━━━━━━━━━
-┠⊷️ *Nombre* :
-┠⊷️ *Edad* :
-┠⊷️ *Pais* :
-┠⊷️ *Anime Favorito* :
+┠⊷️ *Nama* :
+┠⊷️ *Umur* :
+┠⊷️ *Asal Kota* :
+┠⊷️ *Gender* :
 ┗━━━━━━━━━━━━━━━━━━━━
 
 Ketik ${prefix}verify untuk memulai menggunakan bot.`
 				Lxa.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `Adiós @${num.split('@')[0]}👋`
+				teks = `Selamat tinggal @${num.split('@')[0]}👋`
 				Lxa.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
@@ -511,7 +511,7 @@ if (isGroup) {
   try {
 const getmemex = groupMembers.length
 if (getmemex <= memberlimit) {
-  Lxa.sendMessage(from, `Maaf syarat member harus di atas ${memberlimit}, Adiós 👋🏻`, text)
+  Lxa.sendMessage(from, `Maaf syarat member harus di atas ${memberlimit}, selamat tinggal 👋🏻`, text)
 
   setTimeout(() => {
 Lxa.groupLeave(from) // ur cods
@@ -3797,7 +3797,7 @@ break
 
 				default:
 				if (body.startsWith(`${prefix}${command}`)) {
-  reply(`        ────────────────\nHei *${pushname}* !!!\nComando/Command : *${prefix}${command}*\nNo esta en... *${prefix}Menu*\n        ────────────────`)
+  reply(`        ────────────────\nHei *${pushname}* !!!\nPerintah/Command : *${prefix}${command}*\nTidak ada dalam *${prefix}Menu*\n        ────────────────`)
 				}
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
